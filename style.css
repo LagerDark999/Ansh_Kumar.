@@ -20,7 +20,7 @@ body{
     position: fixed;
     width: 10px;
     height: 10px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 0, 0, 0.8) 50%, rgba(211, 3, 3, 0) 100%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 0, 0, 0.8) 50%, rgba(211, 0, 0, 0.288) 100%);
     border-radius: 50%;
     pointer-events: none;
     animation: fadeOut 1.5s ease-out forwards;

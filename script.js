@@ -42,30 +42,43 @@ if (textElements) {
 }
 
 // Particle effect for the cursor
-document.addEventListener("mousemove", (e) => {
-    createParticle(e.clientX, e.clientY);
-});
+document.addEventListener('mousemove', (e) => {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+    particle.style.left = `${e.clientX}px`;
+    particle.style.top = `${e.clientY}px`;
 
-function createParticle(x, y) {
-    const particle = document.createElement("div");
-    particle.classList.add("particle");
-    document.body.appendChild(particle);
-
-    // Set particle position
-    particle.style.left = `${x}px`;
-    particle.style.top = `${y}px`;
-
-    // Randomize particle size and color
+    // Randomize particle size
     const size = Math.random() * 10 + 5; // Random size between 5px and 15px
     particle.style.width = `${size}px`;
     particle.style.height = `${size}px`;
 
-    const colors = ["rgba(255, 0, 0, 1)", "rgba(255, 255, 255, 1)", "rgba(211, 3, 3, 1)", "rgba(255, 69, 0, 1)"];
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    particle.style.background = `radial-gradient(circle, ${randomColor} 0%, rgba(255, 255, 255, 0) 100%)`;
+    // Randomize particle movement direction
+    const xDirection = Math.random() > 0.5 ? 1 : -1;
+    const yDirection = Math.random() > 0.5 ? 1 : -1;
+    particle.style.setProperty('--x', xDirection);
+    particle.style.setProperty('--y', yDirection);
 
-    // Remove particle after animation
-    particle.addEventListener("animationend", () => {
+    // Randomize particle color
+    const colors = [
+        'rgb(255, 0, 0)', // Red-Orange
+        'rgba(255, 140, 0, 0.94)', // Orange
+        'rgba(255, 255, 0, 0.86)', // Yellow
+        'rgba(0, 191, 255, 0.8)', // Light Blue
+        'rgba(17, 0, 255, 0.8)', // Pink
+        'rgba(0, 255, 0, 0.84)', // Light Green
+    ];
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    particle.style.background = `radial-gradient(circle, rgba(255, 255, 255, 1) 0%, ${color} 50%, rgba(0, 0, 0, 0) 100%)`;
+
+    // Randomize animation duration
+    const duration = Math.random() * 1.5 + 0.5; // Random duration between 0.5s and 2s
+    particle.style.animationDuration = `${duration}s`;
+
+    document.body.appendChild(particle);
+
+    // Remove the particle after the animation ends
+    setTimeout(() => {
         particle.remove();
-    });
-}
+    }, duration * 1000);
+});
