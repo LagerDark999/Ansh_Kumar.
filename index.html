@@ -1,167 +1,64 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-<style>
-    @keyframes borderAnimation {
-        0% {
-            border-color: #00aeff;
-            box-shadow: 0 0 10px #00aeff;
-        }
-        25% {
-            border-color: #01ff56;
-            box-shadow: 0 0 10px #01ff56;
-        }
-        50% {
-            border-color: #ff1010;
-            box-shadow: 0 0 10px #ff1010;
-        }
-        75% {
-            border-color: #ffae00;
-            box-shadow: 0 0 10px #ffae00;
-        }
-        100% {
-            border-color: #00aeff;
-            box-shadow: 0 0 10px #00aeff;
-        }
-    }
-
-    @keyframes popUpAnimation {
-        0% { transform: scale(0.8); opacity: 0; }
-        50% { transform: scale(1.1); opacity: 0.9; }
-        100% { transform: scale(1); opacity: 1; }
-    }
-
-    @keyframes paddingAnimation {
-        0% {
-            padding: 20px;
-        }
-        50% {
-            padding: 30px;
-        }
-        100% {
-            padding: 20px;
-        }
-    }
-
-    @keyframes linkHoverAnimation {
-        0% {
-            color: rgb(17, 0, 255);
-            text-shadow: 0 0 5px #00aeff, 0 0 10px #00aeff;
-        }
-        50% {
-            color: #00aeff;
-            text-shadow: 0 0 10px #01ff56, 0 0 20px #01ff56;
-        }
-        100% {
-            color: rgb(0, 4, 255);
-            text-shadow: 0 0 5px #00aeff, 0 0 10px #00aeff;
-        }
-    }
-
-    @keyframes exampleAnimation {
-        0% { transform: scale(0.8); }
-        100% { transform: scale(1); }
-    }
-
-    /* Add vendor prefixes */
-    @-webkit-keyframes exampleAnimation {
-        0% { transform: scale(0.8); }
-        100% { transform: scale(1); }
-    }
-
-    @keyframes testAnimation {
-        0% { background-color: black; }
-        100% { background-color: gray; }
-    }
-
-    body {
-        animation: testAnimation 2s infinite alternate;
-    }
-
-    .container {
-        margin: 20px;
-        padding: 20px;
-        border: 4px solid #00aeff; /* Initial border color */
-        background-color: black;
-        color: rgb(255, 255, 255);
-        animation: popUpAnimation 2s ease-in-out, borderAnimation 4s infinite ease-in-out, paddingAnimation 3s infinite ease-in-out;
-        border-radius: 15px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-        transition: all 0.3s ease-in-out;
-    }
-
-    h1 {
-        text-shadow: 2px 2px 8px #00aeff;
-        transition: text-shadow 0.3s ease-in-out;
-    }
-
-    .container:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
-    }
-
-    nav a {
-        color: #f0f0f0; /* Light gray text */
-        text-decoration: none;
-        font-size: 18px;
-        font-weight: bold;
-        padding: 10px 15px;
-        border: 2px solid #ffae00; /* Orange border */
-        border-radius: 5px;
-        transition: all 0.3s ease-in-out;
-        display: inline-block;
-        background-color: #333; /* Dark gray background */
-    }
-
-    nav a:hover {
-        animation: linkHoverAnimation 1.5s infinite ease-in-out;
-        transform: scale(1.1);
-        background-color: #444; /* Slightly lighter gray on hover */
-        border-color: #ff1010; /* Red border on hover */
-        color: #ffae00; /* Orange text on hover */
-    }
-</style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presentation Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Website</title>
 </head>
 <body>
-    <header>
-        <img src="Logo.svg" alt="Website Logo">
-        <h1>Ansh Kumar The LegendPrime_ff</h1>
-    </header>
     <nav>
-        <a href="https://youtube.com/@legendprime999?si=ArYsz09MgeUS3BJa"><b><i>Home</i></b></a>
-        <a href="https://www.mediafire.com/file/fz2cs08ul509yvk/Ansh_Kumar_The_Only_One_LegendPrime.docx/file"><b><i>My Journey</i></b></a>
-        <a href="https://youtube.com/@lagerdark999ff?si=5KF8p4KabX3nOl7V"><b><i>About</i></b></a>
-        <a href="https://www.mediafire.com/file/v8g3i17k437qh14/MCPE+mods.zip/file"><b><i>MCPE Mods</i></b></a>
-    </nav>
-    <div class="container" id="home">
-        <div class="background-circles"></div>
-        <h2>Home</h2>
-        <p>Hello everyone, my name is <strong>Ansh Kumar</strong>, also known as <em>The Only One LegendPrime</em>. Welcome to my personal website!</p>
-    </div>
-    <div class="container" id="journey">
-        <div class="background-circles"></div>
-        <h2>My Journey</h2>
-        <p>My name is Ansh Kumar, and I have a YouTube channel. Initially, I faced many challenges and setbacks, but I persevered.</p>
-        <p><strong>Year 1:</strong> I started by making Minecraft videos, gaining 33 views and 52k subscribers. However, my channel faced issues, and I had to take a break for exams. When I returned after 2 months, my channel was no longer active.</p>
-        <p><strong>Year 2:</strong> I launched a new channel focusing on Minecraft hacks, mods, APKs, shaders, and texture packs. This year, I gained 600k subscribers, with each video getting over 50k views. Despite the success, I faced personal struggles and ended the year feeling unhappy.</p>
-        <p><strong>Year 3:</strong> I started another new channel with 563 subscribers and over 150 views per video. By the end of the year, I achieved 1 million subscribers, making it the most popular channel of my YouTube journey. However, I also faced depression due to personal issues.</p>
-        <p><b>If you are interested in the full story, please go to "My Journey" and download the file for the complete Story.</b></p>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Charlotte <span>Smith</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#">Service</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#">Contact</a></div>
+            </div>
         </div>
-    <div class="container" id="about">
-        <div class="background-circles"></div>
-        <h2>About</h2>
-        <p>Hello everyone, my name is Ansh Kumar. I live in Amritsar, and I attend Jagat Jyoti Model High School. I created this website from March 2, 2025, to March 13, 2025. I enjoy playing Free Fire, Minecraft, Free Fire Max, and more. If you are interested in playing with me, here are my details:</p>
-        <ul>
-            <li><strong>Free Fire UID:</strong> 6248522765</li>
-            <li><strong>Minecraft Gamertag:</strong> LagerDark999484</li>
-        </ul>
-        <p>I am currently in 10th grade. See you in school!</p>
-        Bye Bye,
-        Ansh Ansh_Kumar_The_Only_One_LegendPrime_ff</p>
-    </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        <div class="dropdown">
+            <div class="links">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Skills</a>
+                <a href="">Service</a>
+                <a href="">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="main-container">
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey I'm <span>Charlotte</span></h1>
+                <div data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900" class="typewriter">I'm a <span class="typewriter-text"></span><label for="">|</label></div>
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt non accusantium nemo amet dolores temporibus.</p>
+                <div class="social-links">
+                    <a data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1600"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <div class="btn" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="1800">
+                    <button>Download CV</button>
+                </div>
+            </div>
+            <div class="image" data-aos="zoom-in" data-aos-duration="3000">
+                <img src="main.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0,});
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>

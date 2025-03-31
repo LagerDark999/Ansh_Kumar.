@@ -1,20 +1,48 @@
-// Function to add two numbers
-// Parameters:
-//   a - The first number to add
-//   b - The second number to add
-// Returns:
-//   The sum of the two numbers
-function add(a, b) {
-    return a + b;
+function hamburg(){
+    const navbar = document.querySelector(".dropdown")
+    navbar.style.transform  = "translateY(0px)"
+}
+function cancel(){
+    const navbar = document.querySelector(".dropdown")
+    navbar.style.transform  = "translateY(-500px)"
 }
 
-// Example usage
-// Define two numbers to add
-let num1 = 5;
-let num2 = 3;
+// for Typewriter effect
 
-// Call the add function with num1 and num2
-let result = add(num1, num2);
+const texts = [
+    "DEVELOPER",
+    "YOUTUBER",
+    "DESIGNER"
+]
 
-// Output the result to the console
-console.log("The result is: " + result);
+let speed = 100;
+
+const textElements = document.querySelector(".typewriter-text")
+
+let textIndex = 0;
+let charcterIndex = 0;
+
+function typeWriter() {
+    if(charcterIndex < texts[textIndex].length){
+        textElements.innerHTML += texts[textIndex].charAt(charcterIndex);
+        charcterIndex++;
+        setTimeout(typeWriter, speed); 
+    }
+    else{
+        setTimeout(eraseText, 1000)
+    }
+}
+
+function eraseText() {
+    if(textElements.innerHTML.length > 0){
+        textElements.innerHTML = textElements.innerHTML.slice(0,-1)
+        setTimeout(eraseText, 50)
+    }
+    else{
+        textIndex = (textIndex + 1) % texts.length;
+        charcterIndex = 0;
+        setTimeout(typeWriter,500)
+    }
+}
+
+window.onload = typeWriter;
