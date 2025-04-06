@@ -131,6 +131,7 @@ section{
     font-weight: 700;
     text-shadow: 0 0 10px rgb(240, 0, 0);
     color: rgb(255, 0, 0);
+    position: center;
 }
 
 .content .typewriter{
@@ -202,7 +203,7 @@ section{
 }
 
 .main-container .image img{
-    width: 103%;
+    width: 101%;
     height: 103%;
     position: center;
 }
