@@ -82,3 +82,26 @@ document.addEventListener('mousemove', (e) => {
         particle.remove();
     }, duration * 1000);
 });
+
+// Snow falling animation
+function createSnowflake() {
+    const snow = document.createElement('div');
+    snow.className = 'snowflake';
+    snow.style.left = Math.random() * 100 + 'vw';
+    snow.style.animationDuration = (3 + Math.random() * 3) + 's';
+    snow.style.opacity = 0.5 + Math.random() * 0.5;
+    snow.style.width = snow.style.height = (6 + Math.random() * 6) + 'px';
+    // Assign random color (red, blue, black, white, green)
+    const snowColors = [
+        'rgba(255,0,0,0.9)',    // Red
+        'rgba(0,0,255,0.9)',    // Blue
+        'rgba(0,0,0,0.8)',      // Black
+        'rgba(255,255,255,0.95)', // White
+        'rgba(0,255,0,0.9)'     // Green
+    ];
+    const color = snowColors[Math.floor(Math.random() * snowColors.length)];
+    snow.style.background = `radial-gradient(circle, ${color} 60%, transparent 100%)`;
+    document.getElementById('snow-container').appendChild(snow);
+    setTimeout(() => snow.remove(), 7000);
+}
+setInterval(createSnowflake, 150);

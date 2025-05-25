@@ -23,6 +23,7 @@
     }
 </style> 
 <body>
+    <div id="snow-container"></div>
     <nav>
         <div class="nav-container">
             <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
@@ -89,28 +90,49 @@
     <titlre>About Section</titlre>
     <section class="about">
         <div class="about-container">
+            <img src="main.jpg" alt="Ansh Kumar" class="about-profile" data-aos="zoom-in" data-aos-duration="1500">
             <h2 data-aos="fade-up" data-aos-duration="1500">About Me</h2>
-            <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
-                I am a passionate learner and creator, currently in 10th grade. 
-                My journey in technology and creativity has led me to explore various fields, 
-                including programming, content creation, and digital art.
+            <p class="about-intro" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+                Hi! I'm <span class="about-highlight">Ansh Kumar</span>, a passionate 10th-grade student who loves <span class="about-highlight">technology</span>, <span class="about-highlight">creativity</span>, and <span class="about-highlight">innovation</span>.<br>
+                I enjoy building things, learning new skills, and sharing knowledge with the world.
             </p>
-            <div class="skills" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+            <div class="skills-grid" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
                 <h3>Skills</h3>
-                <ul>
-                    <li>Programming</li>
-                    <li>Content Creation</li>
-                    <li>Digital Art</li>
-                    <li>Web Development</li>
-                </ul>
+                <div class="skills-list">
+                    <div class="skill-card">Programming</div>
+                    <div class="skill-card">Content Creation</div>
+                    <div class="skill-card">Digital Art</div>
+                    <div class="skill-card">Web Development</div>
+                </div>
             </div>
         </div>
-    </section><style>
-    .about {
-        background-image: url('background_2.jpg');
-        color: white;   
-        padding: 50px;
-        text-align: center;
-    }
-    </style>
+    </section>
+    <section class="contact-section">
+        <div class="contact-container" data-aos="fade-up" data-aos-duration="1500">
+            <h2>Contact Me</h2>
+            <p class="contact-intro">Let's connect! Fill out the form below and I'll get back to you soon.</p>
+            <form class="contact-form">
+                <div class="input-group">
+                    <span class="input-icon"><i class="fa-solid fa-user"></i></span>
+                    <input type="text" name="name" required placeholder=" ">
+                    <label>Name</label>
+                    <span class="focus-anim"></span>
+                </div>
+                <div class="input-group">
+                    <span class="input-icon"><i class="fa-solid fa-envelope"></i></span>
+                    <input type="email" name="email" required placeholder=" ">
+                    <label>Email</label>
+                    <span class="focus-anim"></span>
+                </div>
+                <div class="input-group">
+                    <span class="input-icon"><i class="fa-solid fa-message"></i></span>
+                    <textarea name="message" rows="4" required placeholder=" "></textarea>
+                    <label>Message</label>
+                    <span class="focus-anim"></span>
+                </div>
+                <button type="submit">Send Message</button>
+                <div class="form-success" style="display:none;">Thank you! Your message has been sent.</div>
+            </form>
+        </div>
+    </section>
 </body>
