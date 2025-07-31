@@ -8,7 +8,7 @@ function cancel(){
 }
 
 // Typewriter effect
-const texts = ["DEVELOPER", "YOUTUBER", "GAMER", "ETHICAL HACKER"];
+const texts = ["WEB_DEVELOPER", "PROMPT_ENGINEER", "CALISTHENICS"];
 let speed = 100;
 let textIndex = 0;
 let charcterIndex = 0;
